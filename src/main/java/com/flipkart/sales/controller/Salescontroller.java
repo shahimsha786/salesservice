@@ -12,7 +12,7 @@ public class Salescontroller {
 	
 	@GetMapping("/sale/{imei}")
 	public ResponseEntity<String> postSale(@PathVariable("imei") String imei){
-		String message="posted sale for this device"+imei+"successfully";
+		String message="posted sale for this device"+imei+"shahimsha successfully";
 		System.out.println(message);
 		return ResponseEntity.ok(message);
 	}

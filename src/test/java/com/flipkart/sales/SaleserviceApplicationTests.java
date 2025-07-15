@@ -19,7 +19,7 @@ public class SaleserviceApplicationTests {
     @Test
     public void testPostSale_withValidImei() throws Exception {
         String imei = "123456789012345";
-        String expectedMessage = "posted sale for this device" + imei + "successfully";
+        String expectedMessage = "posted sale for this device" + imei + "shahimsha successfully";
 
         mockMvc.perform(get("/flip/sale/{imei}", imei))
                 .andExpect(status().isOk())
@@ -29,7 +29,7 @@ public class SaleserviceApplicationTests {
     @Test
     public void testPostSale_withAlphanumericImei() throws Exception {
         String imei = "IMEI123ABC456";
-        String expectedMessage = "posted sale for this device" + imei + "successfully";
+        String expectedMessage = "posted sale for this device" + imei + "shahimsha successfully";
 
         mockMvc.perform(get("/flip/sale/{imei}", imei))
                 .andExpect(status().isOk())
@@ -39,7 +39,7 @@ public class SaleserviceApplicationTests {
     @Test
     public void testPostSale_withSpecialCharactersImei() throws Exception {
         String imei = "IMEI@#%";
-        String expectedMessage = "posted sale for this device" + imei + "successfully";
+        String expectedMessage = "posted sale for this device" + imei + "shahimsha successfully";
 
         mockMvc.perform(get("/flip/sale/{imei}", imei))
                 .andExpect(status().isOk())
